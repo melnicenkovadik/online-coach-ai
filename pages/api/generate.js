@@ -52,11 +52,9 @@ export default async function (req, res) {
 
 function generatePrompt(animal) {
     const trainingProgram = `
- About me and my goal with training :${animal},
-if the information in the "About me and my goal with training" field does not correspond to the subject of the sport, answer that this is not correct information in order to create a training plan,
- and if, according to the data  provided in the "About me and my goal with training" field, you can create a training program or give recommendations on the topic of sports, then answer normally
- 
- Training program  in 2000 words or less if  "About me and my goal with training " is correct: 
-   `
+ Act like you are my online coach.
+ About me and my goal with training :${animal},   
+ If you, as my coach, don’t understand even if you can help me, provide a sample of what I can ask you
+ `
     return trainingProgram
 }
