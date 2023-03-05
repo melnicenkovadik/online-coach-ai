@@ -53,8 +53,9 @@ export default async function (req, res) {
 function generatePrompt(animal) {
     const trainingProgram = `
  Act like you are my online coach.
- About me and my goal with training :${animal},   
+ About me and my goal with training:${animal},   
  If you, as my coach, don’t understand even if you can help me, provide a sample of what I can ask you
+ Answer in the language that is used in the field "About me and my goal with training:" please
  `
     return trainingProgram
 }
